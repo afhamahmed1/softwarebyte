@@ -1,0 +1,28 @@
+Options +FollowSymLinks -MultiViews
+RewriteEngine On
+
+
+
+RewriteRule ^service-details/([0-9a-zA-z]+) service-details.php?slug=$1 [NC,L]
+
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php [NC,L] 
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^homepage index.php [NC,L]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^about-us about.php [NC,L]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^projects project2.php [NC,L]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^blogs blog.php [NC,L]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^contact-us contact.php [NC,L]
+
+
